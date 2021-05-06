@@ -1,37 +1,55 @@
-## Welcome to GitHub Pages
+## C# configuration with Visual Studio Code running on CentOS 7
+### To install Visual Studio Code in CentOS 7, follow this link
+<a>https://mbmasadeh.github.io/VisualStudioCodeSetupCentOS/</a>
 
-You can use the [editor on GitHub](https://github.com/mbmasadeh/CProjectsVSCode/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Open VS code from the termnal by typing this command
+<pre><code>$ code </code></pre>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<p>Then inside it open a new terminal from the menu above - Run </p>
+<p>We need to install all the required SDK packeges to run C# smoothly</p>
 
-### Markdown
+Add the Microsoft package signing key to your list of trusted keys and add the Microsoft package repository
+<pre><code>$ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm</code></pre>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Install the SDK
+<pre><code>$ sudo yum install dotnet-sdk-5.0 </code></pre>
 
-```markdown
-Syntax highlighted code block
+### Install the runtime
+<pre><code>$ sudo yum install aspnetcore-runtime-5.0</code></pre>
 
-# Header 1
-## Header 2
-### Header 3
+### Test your work
+<p>Instaltion and confiuration is done, to test your work type this command</p>
+<pre><code>$ dotnet </code></pre>
 
-- Bulleted
-- List
+<p>The result is:</p>
+<pre><code>
+Usage: dotnet [options]
+Usage: dotnet [path-to-application]
 
-1. Numbered
-2. List
+Options:
+  -h|--help         Display help.
+  --info            Display .NET information.
+  --list-sdks       Display the installed SDKs.
+  --list-runtimes   Display the installed runtimes.
 
-**Bold** and _Italic_ and `Code` text
+path-to-application:
+  The path to an application .dll file to execute.
+  </code></pre>
 
-[Link](url) and ![Image](src)
-```
+### Create your first application
+<p>To make the first .Net application, type this command which will start a new console application</p>
+<pre><code>$ dotnet new consol -o MyFirstApplication </code></pre>
+<p>Note that this is a Concol application</p>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+<pre><code>$ dotnet new api -o ApiApplication </code></pre>
+<p>Note that this is an Api application</p>
+<p>To run you application, type this command <p>
+<p>First go inside "YourApplicationName" project</p>
+<pre><code>$ cd YourApplicationName </code></pre>
 
-### Jekyll Themes
+<p>Then run it</p>
+<pre><code>$ dotnet run </code></pre>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mbmasadeh/CProjectsVSCode/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+<p>The result is hallow word</p>
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<p>Thats all....!</p>
