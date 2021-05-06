@@ -51,5 +51,5 @@ path-to-application:
 <pre><code>$ dotnet run </code></pre>
 
 <p>The result is hallow word</p>
-
+<p>You can browse the application by open it from the side bar</p>
 <p>Thats all....!</p>
