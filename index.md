@@ -1,6 +1,6 @@
 ## C# configuration with Visual Studio Code running on CentOS 7
 ### To install Visual Studio Code in CentOS 7, follow this link
-<a href ="https://mbmasadeh.github.io/VisualStudioCodeSetupCentOS"> Install Visual Studio Code in CentOS 7</a>
+<a href ="https://mbmasadeh.github.io/VisualStudioCodeSetupCentOS" target="_blank"> Install Visual Studio Code in CentOS 7</a>
 
 ### Open VS code from the termnal by typing this command
 <pre><code>$ code </code></pre>
